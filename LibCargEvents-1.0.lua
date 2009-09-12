@@ -1,3 +1,11 @@
+--[[
+Name: LibCargEvents-1.0
+Author: Cargor (xconstruct@gmail.com)
+Dependencies: LibStub
+License: GPL 2
+Description: Library to handle events
+]]
+
 local lib = LibStub:NewLibrary("LibCargEvents-1.0", 1)
 if(not lib) then return end
 
