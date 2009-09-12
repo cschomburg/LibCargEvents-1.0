@@ -43,9 +43,9 @@ function lib.SetMetaHandler(self, func)
 	metahandlers[self] = func
 end
 
-function lib.Implement(self)
-	for k,v in pairs(lib) do
-		self[k] = v
+function lib:Embed(target)
+	for k,v in pairs(self) do
+		target[k] = v
 	end
 end
 gEvents = events

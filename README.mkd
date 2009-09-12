@@ -1,0 +1,42 @@
+LibCargEvents-1.0
+=================
+
+Library to handle events
+
+Core API
+--------
+
+### LCE = LibStub("LibCargEvents-1.0") ###
+Fetch the library
+
+### LCE.RegisterEvent(identifier, event, function) ###
+Registers a new event
+
+*	identifier: your frame or a unique string
+*	event: The event you want to register
+*	function: The function called when the event fires
+
+### LCE.UnregisterEvent(identifier, event) ###
+Unregisters a registered event
+
+*	identifier: your frame or a unique string
+*	event: The event you want to register
+
+### LCE.IsEventRegistered(identifier, event) ###
+Boolean: Returns whether the event is registered by identifier
+
+*	identifier: your frame or a unique string
+*	event: The event you want to register
+
+### LCE.SetMetaHandler(identifier, function) ###
+Sets a metahandler function for the identifier which returns whether the event should be passed on
+
+*	identifier: your frame or a unique string
+*	function: A function returning a boolean depending on if the event should be passed on
+
+Example
+-------
+	LibStub("LibCargEvents-1.0").RegisterEvent("MyAddOn", "PLAYER_LOGIN", function(self, event)
+		print("You are now logged in!")
+	)
+Prints a message on login
