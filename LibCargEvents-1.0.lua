@@ -6,7 +6,7 @@ License: GPL 2
 Description: Library to handle events
 ]]
 
-local lib = LibStub:NewLibrary("LibCargEvents-1.0", 1)
+local lib = LibStub:NewLibrary("LibCargEvents-1.0", 2)
 if(not lib) then return end
 
 local events = {}
