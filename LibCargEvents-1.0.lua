@@ -14,7 +14,7 @@ local events = {}
 local metahandlers = {}
 local frame = CreateFrame("Frame")
 function lib.RegisterEvent(self, event, func)
-	if(not func and type(event) == "table") then
+	if(not func and type(event) == "function") then
 		lazyCounter = lazyCounter + 1
 		func, event, self = event, self, lazyCounter
 	elseif(self == lib) then
